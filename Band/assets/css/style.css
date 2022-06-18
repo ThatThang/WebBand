@@ -33,11 +33,13 @@ html {
 #header{
     height: 46px;
     background-color: #000;
+    
 
 }
 
 #nav { 
-
+    
+    display: inline-block;
     list-style-type: none; /* list-style-type: none; Kiểu mặc định của danh sách  */
 }
 
@@ -76,6 +78,7 @@ html {
 #nav .subnav li:hover {
     background-color: #ccc;
     color: #000;
+    cursor: pointer;/* cursor: pointer; Đổi thuộc tính con trở chuột */
 }
 
 
@@ -96,6 +99,23 @@ html {
     color: black;
     padding: 8px 16px;
     line-height: 30px;
+}
+
+#header .search-btn {
+    
+    float: right;
+    
+}
+#header .search-btn:hover {
+    
+    background-color:#f44336;
+    cursor: pointer;/* cursor: pointer; Đổi thuộc tính con trở chuột */
+}
+
+#header .search-icon{
+    color: white;
+    line-height: 46px;
+    padding: 0px 24px;
 }
 
 #slider{
