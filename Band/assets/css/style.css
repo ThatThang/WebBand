@@ -27,13 +27,18 @@ html {
 
 */
 #main{
+    position: relative;
 
 }
 
 #header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 46px;
     background-color: #000;
-    
+    z-index: 1;
 
 }
 
@@ -118,12 +123,45 @@ html {
     padding: 0px 24px;
 }
 
-#slider{
-    min-height: 500px;/* min-height: 500px; Chiều cao tối thiểu là 500px  */
+#slider {
+    position: relative;
+    background: url(/Band/assets/img/slider/slider1.jpg) top center / cover no-repeat;
+    margin-top: 46px;
+    /* min-height: 500px; Chiều cao tối thiểu là 500px  */
+    padding-top: 50%; /* Chiều cao bằng 50% chiều ngang của chính nó*/
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    margin: center;
+    text-align: center;
+    left: 0;
+    right: 0;
+    /* left: 50%;
+    
+    transform: translateX(-50%) */
+   
+    
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    margin: 15px 0px;
+    font-size: 15px;
+    margin-top: 25px;
 
 }
 
+
 #content{
+    height: 1500px;
+    background-color: #333;
 
 }
 
