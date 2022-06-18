@@ -36,24 +36,44 @@ html {
 
 }
 
-#nav li {
+#nav { 
+
+    list-style-type: none; /* list-style-type: none; Kiểu mặc định của danh sách  */
+}
+
+
+#nav > li {
+
     display: inline-block;/*  display: inline-block; Hiển thị trên 1 hàng và giữ dạng khối */
-    text-align: center;
+
+}
+
+#nav li {
+    
+    position: relative;
     
     
+}
+
+#nav > li > a {/* a là con trực tiếp của li, li là con trực tiếp của nav */
+    color: white;
+    text-transform: uppercase; /* text-transform: uppercase; Viết Hoa*/
 }
 
 #nav li a {
 
     text-decoration: none;
-    color: white;
     line-height: 46px;
     padding: 0px 24px;
-    display: inline-block;
+    display: block;
 
 }
+#nav > li:hover .subnav {
+    display: block;
+}
 
-#nav li:hover a {
+#nav > li:hover > a ,
+#nav .subnav li:hover {
     background-color: #ccc;
     color: #000;
 }
@@ -61,9 +81,25 @@ html {
 
 #nav .subnav {
     display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   
+}
+
+#nav .subnav a {
+    
+    color: black;
+    padding: 8px 16px;
+    line-height: 30px;
 }
 
 #slider{
+    min-height: 500px;/* min-height: 500px; Chiều cao tối thiểu là 500px  */
 
 }
 
