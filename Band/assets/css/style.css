@@ -139,9 +139,10 @@ html {
     text-align: center;
     left: 0;
     right: 0;
-    /* left: 50%;
-    
-    transform: translateX(-50%) */
+    /* 
+    left: 50%;
+    transform: translateX(-50%) 
+    */
    
     
 }
@@ -159,12 +160,48 @@ html {
 }
 
 
-#content{
-    height: 1500px;
-    background-color: #333;
+#content {
 
 }
 
-#footer{
+#content .content-section {
+    width: 800px;
+    height: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 ;
+}
+
+#content .section-heading {
+    font-size: 30px; 
+    font-weight: 10;
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 4px; /* letter-spacing: 4px; Tăng khoảng cách giữa các chữ lên 4px*/
+}
+
+#content .section-sub-heading,
+#content .about-text {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+
+#content .section-sub-heading {
+
+    text-align: center;
+    color:grey;
+    font-style: italic; /* font-style: italic; Làm in nghiêng chữ*/
+    
+
+}
+
+#content .about-text {
+
+    text-align: justify;/* Căn đều hai bên của đoạn văn  */
+    line-height: 1.4;
+}
+
+#footer {
 
 }
