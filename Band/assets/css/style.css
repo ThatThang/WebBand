@@ -9,6 +9,10 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Cách 2 */
+.clear {
+    clear: both;
+}
 /*  
 
 1. Từ ngoài vào trong
@@ -169,7 +173,7 @@ html {
     height: 670px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 0 ;
+    padding: 64px 16px;
 }
 
 #content .section-heading {
@@ -200,6 +204,32 @@ html {
 
     text-align: justify;/* Căn đều hai bên của đoạn văn  */
     line-height: 1.4;
+}
+
+#content .members-list {
+    margin-top: 48px;
+
+    /* Cách 1 */
+   /* overflow: hidden; Giúp khác phụ tình trạng các item float bị nổi nên
+    và các container float bị co lại */
+}
+
+#content .member-item {
+    float: left;/* float: left; Cách để kéo các phần tử nằm trên 1 hàng */
+    width: calc(100% / 3);
+    text-align: center;
+    /* width: 33.33333%; */
+}
+
+#content .member-name {
+    
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+#content .member-img {
+    width: 154px;
+    border-radius: 4px;/* border-radius: 4px; Giúp bo góc các cạnh*/
 }
 
 #footer {
