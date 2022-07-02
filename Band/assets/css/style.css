@@ -367,8 +367,9 @@ html {
 .modal-container {
     position: relative;
     background-color: #fff;
-    width: calc(100% -32px);
+    width: 900px;
     min-height: 200px;
+    animation: FadeIn ease 0.4s;
 }
 
 .modal-header {
@@ -444,4 +445,15 @@ html {
 
 .modal-footer a{
     color: #2196F3;
+}
+
+@keyframes FadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);   
+    }
 }
