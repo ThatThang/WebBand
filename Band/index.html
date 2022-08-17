@@ -76,17 +76,17 @@
                 </p>
                 <div class="members-list">
 
-                    <div class="member-item">
+                    <div class="col-third col text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/member1.jpg" alt="" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col-third col text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/member1.jpg" alt="" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col-third col text-center">
                         <p class="member-name">Name</p>
                         <img src="./assets/img/band/member1.jpg" alt="" class="member-img">
                     </div>
@@ -110,8 +110,8 @@
                     </ul>
                     <!--  End: Ticket  -->
 
-                    <div class="place-list">
-                        <div class="place-item">
+                    <div class="row place-list">
+                        <div class="col col-third">
                             <img src="./assets/img/places/place1.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -121,7 +121,7 @@
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/places/place2.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
@@ -131,7 +131,7 @@
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/places/place3.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -143,7 +143,7 @@
                         <div class="clear"></div>
                     </div>
                     <!-- Begin: Places -->
-                    
+
 
                     <!-- End: Places -->
                 </div>
@@ -165,34 +165,34 @@
     </div>
     <!-- Begin: Modal -->
     <div class="modal">
-       <div class="modal-container js-modal-container">
-        <div class="modal-close js-close-modal">
-            <i class="fa-solid fa-xmark"></i>
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-close-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <header class="modal-header">
+                <i class=" modal-heading-icon fa-solid fa-suitcase"></i>
+                Tickets
+            </header>
+            <div class="modal-body">
+                <label for="tickets-quantity" class="modal-label">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+                <label for="tickets-email" class="modal-label">
+                    <i class="fa-solid fa-user"></i>
+                    Send to
+                </label>
+                <input id="tickets-email" type="email" class="modal-input" placeholder="Enter email">
+                <button id="buy-tickets">
+                    Pay
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
         </div>
-        <header class="modal-header">
-            <i class=" modal-heading-icon fa-solid fa-suitcase"></i>
-            Tickets
-        </header>
-        <div class="modal-body">
-            <label for="tickets-quantity" class="modal-label">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Tickets, $15 per person
-            </label>
-            <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
-            <label for="tickets-email" class="modal-label">
-                <i class="fa-solid fa-user"></i>
-                Send to
-            </label>
-            <input id="tickets-email" type="email" class="modal-input" placeholder="Enter email">
-            <button id="buy-tickets">
-                Pay
-                <i class="fa-solid fa-check"></i>
-            </button>
-        </div>
-        <footer class="modal-footer">
-            <p class="modal-help">Need <a href="">help?</a></p>
-        </footer>
-       </div> 
 
     </div>
     <!-- End: Modal -->
@@ -216,17 +216,18 @@
 
         /* Lặp qua từng button lắng nghe hành vi click */
         for (const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click',showBuyTickets)
+            buyBtn.addEventListener('click', showBuyTickets)
         }
         /* Nghe hành vi click vào button Close */
-        extBtn.addEventListener('click',closeBuyTickets)
-        
-        /* Nghe hành vi click vào phần ngoài model */
-        modal.addEventListener('click',closeBuyTickets)
+        extBtn.addEventListener('click', closeBuyTickets)
 
-        modalContainer.addEventListener('click', function (event){
+        /* Nghe hành vi click vào phần ngoài model */
+        modal.addEventListener('click', closeBuyTickets)
+
+        modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
     </script>
     <!-- End: JavaScript -->
+
 </html>

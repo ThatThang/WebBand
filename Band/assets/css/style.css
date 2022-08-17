@@ -2,7 +2,8 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;/* Giúp tính toán để  không làm thay đổi giá trị của phần tử khi thêm các thuộc tính padding, border  */ 
+    box-sizing: border-box;
+    /* Giúp tính toán để  không làm thay đổi giá trị của phần tử khi thêm các thuộc tính padding, border  */
 }
 
 html {
@@ -17,6 +18,32 @@ html {
 .text-white {
     color: white !important;
 }
+
+/* Common */
+
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+.col-half {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
 /*  
 
 1. Từ ngoài vào trong
@@ -34,12 +61,13 @@ html {
 4. Kiểu dáng ( Kiểu chữ, hình tròn, hình vuông )
 
 */
-#main{
+
+#main {
     position: relative;
 
 }
 
-#header{
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,29 +78,33 @@ html {
 
 }
 
-#nav { 
-    
+#nav {
+
     display: inline-block;
-    list-style-type: none; /* list-style-type: none; Kiểu mặc định của danh sách  */
+    list-style-type: none;
+    /* list-style-type: none; Kiểu mặc định của danh sách  */
 }
 
 
-#nav > li {
+#nav>li {
 
-    display: inline-block;/*  display: inline-block; Hiển thị trên 1 hàng và giữ dạng khối */
+    display: inline-block;
+    /*  display: inline-block; Hiển thị trên 1 hàng và giữ dạng khối */
 
 }
 
 #nav li {
-    
+
     position: relative;
-    
-    
+
+
 }
 
-#nav > li > a {/* a là con trực tiếp của li, li là con trực tiếp của nav */
+#nav>li>a {
+    /* a là con trực tiếp của li, li là con trực tiếp của nav */
     color: white;
-    text-transform: uppercase; /* text-transform: uppercase; Viết Hoa*/
+    text-transform: uppercase;
+    /* text-transform: uppercase; Viết Hoa*/
 }
 
 #nav li a {
@@ -83,15 +115,17 @@ html {
     display: block;
 
 }
-#nav > li:hover .subnav {
+
+#nav>li:hover .subnav {
     display: block;
 }
 
-#nav > li:hover > a ,
+#nav>li:hover>a,
 #nav .subnav li:hover {
     background-color: #ccc;
     color: #000;
-    cursor: pointer;/* cursor: pointer; Đổi thuộc tính con trở chuột */
+    cursor: pointer;
+    /* cursor: pointer; Đổi thuộc tính con trở chuột */
 }
 
 
@@ -104,28 +138,30 @@ html {
     background-color: white;
     list-style-type: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-   
+
 }
 
 #nav .subnav a {
-    
+
     color: black;
     padding: 8px 16px;
     line-height: 30px;
 }
 
 #header .search-btn {
-    
+
     float: right;
-    
-}
-#header .search-btn:hover {
-    
-    background-color:#f44336;
-    cursor: pointer;/* cursor: pointer; Đổi thuộc tính con trở chuột */
+
 }
 
-#header .search-icon{
+#header .search-btn:hover {
+
+    background-color: #f44336;
+    cursor: pointer;
+    /* cursor: pointer; Đổi thuộc tính con trở chuột */
+}
+
+#header .search-icon {
     color: white;
     line-height: 46px;
     padding: 0px 24px;
@@ -136,7 +172,8 @@ html {
     background: url(/Band/assets/img/slider/slider1.jpg) top center / cover no-repeat;
     margin-top: 46px;
     /* min-height: 500px; Chiều cao tối thiểu là 500px  */
-    padding-top: 50%; /* Chiều cao bằng 50% chiều ngang của chính nó*/
+    padding-top: 50%;
+    /* Chiều cao bằng 50% chiều ngang của chính nó*/
 }
 
 #slider .text-content {
@@ -151,8 +188,8 @@ html {
     left: 50%;
     transform: translateX(-50%) 
     */
-   
-    
+
+
 }
 
 #slider .text-heading {
@@ -168,9 +205,7 @@ html {
 }
 
 
-#content {
-
-}
+#content {}
 
 #content .content-section {
     width: 800px;
@@ -181,11 +216,12 @@ html {
 }
 
 #content .section-heading {
-    font-size: 30px; 
+    font-size: 30px;
     font-weight: 10;
     text-align: center;
     margin: 10px 0;
-    letter-spacing: 4px; /* letter-spacing: 4px; Tăng khoảng cách giữa các chữ lên 4px*/
+    letter-spacing: 4px;
+    /* letter-spacing: 4px; Tăng khoảng cách giữa các chữ lên 4px*/
 }
 
 #content .section-sub-heading,
@@ -198,15 +234,17 @@ html {
 #content .section-sub-heading {
 
     text-align: center;
-    color:grey;
-    font-style: italic; /* font-style: italic; Làm in nghiêng chữ*/
-    
+    color: grey;
+    font-style: italic;
+    /* font-style: italic; Làm in nghiêng chữ*/
+
 
 }
 
 #content .about-text {
 
-    text-align: justify;/* Căn đều hai bên của đoạn văn  */
+    text-align: justify;
+    /* Căn đều hai bên của đoạn văn  */
     line-height: 1.4;
 }
 
@@ -214,26 +252,21 @@ html {
     margin-top: 48px;
 
     /* Cách 1 */
-   /* overflow: hidden; Giúp khác phụ tình trạng các item float bị nổi nên
+    /* overflow: hidden; Giúp khác phụ tình trạng các item float bị nổi nên
     và các container float bị co lại */
 }
 
-#content .member-item {
-    float: left;/* float: left; Cách để kéo các phần tử nằm trên 1 hàng */
-    width: calc(100% / 3);
-    text-align: center;
-    /* width: 33.33333%; */
-}
 
 #content .member-name {
-    
+
     font-size: 15px;
     margin: 15px 0px;
 }
 
 #content .member-img {
     width: 154px;
-    border-radius: 4px;/* border-radius: 4px; Giúp bo góc các cạnh*/
+    border-radius: 4px;
+    /* border-radius: 4px; Giúp bo góc các cạnh*/
 }
 
 
@@ -242,7 +275,7 @@ html {
 
     background-color: #000;
     height: 846px;
-    
+
 
 }
 
@@ -257,7 +290,8 @@ html {
     font-size: 15px;
     color: #757575;
     list-style-type: none;
-    border: 1px solid #ddd;/* border-bottom: 1px solid #ddd; Tạo viền dưới nét liền với độ dày 1px mã màu #ddd */
+    border: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; Tạo viền dưới nét liền với độ dày 1px mã màu #ddd */
 }
 
 .tickets-list .sold-out {
@@ -270,28 +304,25 @@ html {
 }
 
 .tickets-list .quantity {
-    float: right; /* float: right; Đưa phần tử sang bên phải */
+    float: right;
+    /* float: right; Đưa phần tử sang bên phải */
     background-color: black;
     color: white;
     border: 1px solid #333;
     padding: 3px 8px;
     margin-right: 16px;
-    border-radius: 50%; /* border-radius: 50%; Giúp làm tròn các góc của phần tử, tạo hình tròn */
+    border-radius: 50%;
+    /* border-radius: 50%; Giúp làm tròn các góc của phần tử, tạo hình tròn */
 
 }
+
 /* Place */
 .place-list {
-   
-    margin: 32px -8px 0px;
+
+    margin-top: 32px;
 
 }
 
-.place-item {
-    float: left;
-    width: calc(100% / 3 );
-    padding: 0px 8px;
-
-}
 
 .place-img {
     width: 100%;
@@ -313,7 +344,7 @@ html {
 
 .place-heading {
     font-size: 15px;
-    font-weight: 600;   
+    font-weight: 600;
 }
 
 .place-time {
@@ -337,14 +368,12 @@ html {
 }
 
 .place-buy-btn:hover {
-    background-color:#ddd ;
+    background-color: #ddd;
     color: black;
 }
 
 /* Footer Section */
-#footer {
-
-}
+#footer {}
 
 .modal {
     position: fixed;
@@ -392,7 +421,7 @@ html {
     top: 0px;
     right: 0px;
     color: #fff;
-    padding:16px;
+    padding: 16px;
 }
 
 .modal-close:hover {
@@ -415,13 +444,13 @@ html {
     border: 1px solid #ccc;
     width: 100%;
     padding: 10px;
-    font-size: 16px;    
+    font-size: 16px;
 }
 
 #buy-tickets {
     display: block;
     width: 100%;
-    padding:16px 0px;
+    padding: 16px 0px;
     margin: 16px 0px;
     color: #fff;
     text-transform: uppercase;
@@ -434,7 +463,7 @@ html {
     background-color: #ccc;
     color: #000;
     cursor: pointer;
-    
+
 }
 
 .modal-footer {
@@ -443,17 +472,18 @@ html {
     margin-bottom: 15px;
 }
 
-.modal-footer a{
+.modal-footer a {
     color: #2196F3;
 }
 
 @keyframes FadeIn {
-    from{
+    from {
         opacity: 0;
         transform: translateY(-140px);
     }
+
     to {
         opacity: 1;
-        transform: translateY(0px);   
+        transform: translateY(0px);
     }
 }
