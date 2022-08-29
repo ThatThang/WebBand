@@ -25,6 +25,12 @@ html {
     margin-right: -8px;
     margin-left: -8px;
 }
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+
+}
 
 .col {
     float: left;
@@ -40,9 +46,22 @@ html {
     width: 50%;
 }
 
+.col-full {
+    width: 100%;
+}
+
 .text-center {
     text-align: center;
 }
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
 
 /*  
 
@@ -209,7 +228,7 @@ html {
 
 #content .content-section {
     width: 800px;
-    height: 670px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;
@@ -370,6 +389,7 @@ html {
 .place-buy-btn:hover {
     background-color: #ddd;
     color: black;
+    cursor: pointer;
 }
 
 /* Footer Section */
@@ -476,6 +496,50 @@ html {
     color: #2196F3;
 }
 
+/* Contact */
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* MỘt dạng Selector nâng cao */
+.contact-info i[class*="fa-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: #ccc 1px solid;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    color: white;
+    background-color: black;
+    float: right;
+    font-size: 15px;
+    padding: 10px 16px;
+
+}
+
+.contact-form .form-submit-btn:hover {
+    color: #000;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
 @keyframes FadeIn {
     from {
         opacity: 0;
@@ -487,3 +551,30 @@ html {
         transform: translateY(0px);
     }
 }
+
+/* Map Section */
+.map-section img {
+    width: 100%;
+}
+
+.contact-footer {
+    color: #333;
+    height:200px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+} 
+
+.contact-footer i:hover {
+    color: #ddd;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.contact-footer .contact-icons {
+    padding: 60px 0px 15px;
+}
+
+.contact-footer p {
+    font-size: 15px;
+} 
