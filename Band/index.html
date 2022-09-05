@@ -42,6 +42,9 @@
             <div class="search-btn">
                 <i class="search-icon fa-solid fa-magnifying-glass"></i>
             </div>
+            <div id = "mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon fa-solid fa-bars"></i>
+            </div>
             <!-- End: Search Button -->
 
         </div>
@@ -267,6 +270,39 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+
+    <script>
+        var header = document.getElementById('header')
+        // Mobile menu
+        var mobileMenu = document.getElementById('mobile-menu')
+
+        var headerHeight = header.clientHeight
+        
+        // Đóng mở moblie menu
+        mobileMenu.onclick = function () {
+            var isOpen = header.clientHeight === headerHeight
+
+            if (isOpen) {
+                header.style.height = 'auto'
+            }
+            else
+            {
+                header.style.height = '46px'
+            }
+        }
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        console.log(menuItems)
+
+        for (var i=0; i < menuItems.length ; i++){
+            var menuItem = menuItems[i]
+            console.log(menuItem)
+        }
+
+
+
+
     </script>
     <!-- End: JavaScript -->
 

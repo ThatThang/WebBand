@@ -94,6 +94,7 @@ html {
     height: 46px;
     background-color: #000;
     z-index: 1;
+    overflow: hidden;
 
 }
 
@@ -105,11 +106,10 @@ html {
 }
 
 
-#nav>li {
+#nav > li {
 
     display: inline-block;
     /*  display: inline-block; Hiển thị trên 1 hàng và giữ dạng khối */
-
 }
 
 #nav li {
@@ -166,12 +166,13 @@ html {
     padding: 8px 16px;
     line-height: 30px;
 }
-
+#header .mobile-menu-btn,
 #header .search-btn {
 
     float: right;
 
 }
+
 
 #header .search-btn:hover {
 
@@ -180,6 +181,11 @@ html {
     /* cursor: pointer; Đổi thuộc tính con trở chuột */
 }
 
+#header .mobile-menu-btn:hover .menu-icon {
+    background-color: #f44336;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: white;
     line-height: 46px;
@@ -228,6 +234,7 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -577,4 +584,34 @@ html {
 
 .contact-footer p {
     font-size: 15px;
-} 
+}
+
+/* Responsives */
+
+/* PC */
+@media (min-width:1024px) {
+    #header .menu-icon {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width:740px) and (max-width:1024px) {
+    #header .menu-icon {
+        display: none;
+    }
+}
+
+
+/* Moblie */
+@media (max-width:740px) {
+    #nav > li {
+
+        display: block;
+        /*  display: inline-block; Hiển thị trên 1 hàng và giữ dạng khối */
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+}
