@@ -25,15 +25,16 @@
                 <li><a href="#band">Band</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a>
+                    <a href="#">
                         More
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a>Merchandise</a></li>
-                        <li><a>Extras</a></li>
-                        <li><a>Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
+                    
                 </li>
             </ul>
             <!-- End: nav-->
@@ -42,7 +43,7 @@
             <div class="search-btn">
                 <i class="search-icon fa-solid fa-magnifying-glass"></i>
             </div>
-            <div id = "mobile-menu" class="mobile-menu-btn">
+            <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon fa-solid fa-bars"></i>
             </div>
             <!-- End: Search Button -->
@@ -278,7 +279,7 @@
         var mobileMenu = document.getElementById('mobile-menu')
 
         var headerHeight = header.clientHeight
-        
+
         // Đóng mở moblie menu
         mobileMenu.onclick = function () {
             var isOpen = header.clientHeight === headerHeight
@@ -286,8 +287,7 @@
             if (isOpen) {
                 header.style.height = 'auto'
             }
-            else
-            {
+            else {
                 header.style.height = '46px'
             }
         }
@@ -295,9 +295,21 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
         console.log(menuItems)
 
-        for (var i=0; i < menuItems.length ; i++){
+        for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i]
-            console.log(menuItem)
+
+
+            menuItem.onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+
+                } else {
+
+                    header.style.height = null;
+                }
+            }
+
         }
 
 

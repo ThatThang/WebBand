@@ -94,8 +94,6 @@ html {
     height: 46px;
     background-color: #000;
     z-index: 1;
-    overflow: hidden;
-
 }
 
 #nav {
@@ -117,6 +115,12 @@ html {
     position: relative;
 
 
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top:0;
+    right: 0;
 }
 
 #nav>li>a {
@@ -610,8 +614,24 @@ html {
         display: block;
         /*  display: inline-block; Hiển thị trên 1 hàng và giữ dạng khối */
     }
+    #header {
+        overflow: hidden;
+    }
 
     #header .search-btn {
         display: none;
+    }
+
+    #nav {
+        display: block;
+    }
+    #nav .subnav {
+        position: initial;
+        background: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 0 36px;
+        line-height: 40px;
     }
 }
